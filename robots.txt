@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://kotakondo.github.io/sitemap.xml
