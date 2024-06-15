@@ -1,0 +1,9 @@
+<div class="projects">
+    {%- assign selected_projects = site.projects | where: "selected", true -%}
+    {%- assign sorted_projects = selected_projects | sort: "importance" %}
+    <div class="grid">
+      {%- for project in sorted_projects -%}
+        {% include projects.html %}
+      {%- endfor %}
+    </div>
+  </div>
