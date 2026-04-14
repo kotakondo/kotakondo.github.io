@@ -49,12 +49,6 @@
         - Developed multiagent trajectory planner robust to communication delay
         - Implemented imitation learning-based trajectory generation
     - title: Research Assistant
-      institution: Stanford University, Assoc. Prof. Simone D'Amico
-      year: 2020 - 2021
-      description:
-        - The DWARF Satellite Project, Attitude Dynamics and Control System (ADCS)
-        - Built attitude and orbital simulator on C++/MATLAB Simulink
-    - title: Research Assistant
       institution: University of Michigan & Kyushu University, Prof. Kolmanovsky & Prof. Hanada
       year: 2020 - 2021
       description:
