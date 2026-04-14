@@ -2,7 +2,7 @@
 layout: page
 title: REAL
 description: resilience and adaptation using large language models on autonomous aerial robots
-img:
+img: assets/img/real.png
 importance: 2
 category: research
 selected: true

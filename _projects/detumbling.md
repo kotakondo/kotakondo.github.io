@@ -2,7 +2,7 @@
 layout: page
 title: Satellite Detumbling
 description: nonlinear model predictive detumbling of under-actuated satellites with a single-axis magnetic actuator
-img:
+img: assets/img/detumbling.png
 importance: 4
 category: research
 selected: true

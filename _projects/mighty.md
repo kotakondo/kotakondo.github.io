@@ -2,7 +2,7 @@
 layout: page
 title: MIGHTY
 description: Hermite spline-based efficient trajectory planning
-img:
+img: assets/img/mighty.gif
 importance: 1
 category: research
 selected: true

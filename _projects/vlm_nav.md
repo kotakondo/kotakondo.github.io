@@ -2,7 +2,7 @@
 layout: page
 title: VLM Navigation
 description: efficient navigation in unknown indoor environments with vision-language models
-img:
+img: assets/img/vlm_nav.png
 importance: 2
 category: research
 selected: true

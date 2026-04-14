@@ -2,7 +2,7 @@
 layout: page
 title: CGD
 description: constraint-guided diffusion policies for UAV trajectory planning
-img:
+img: assets/img/cgd.png
 importance: 2
 category: research
 selected: true
