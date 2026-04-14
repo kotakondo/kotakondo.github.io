@@ -3,7 +3,7 @@ layout: page
 title: DYNUS
 description: uncertainty-aware trajectory planner in dynamic unknown environments
 img: assets/img/dynus.gif
-importance: 1
+importance: 3
 category: research
 selected: true
 related_publications: dynus2025

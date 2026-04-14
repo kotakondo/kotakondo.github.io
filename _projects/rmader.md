@@ -3,7 +3,7 @@ layout: page
 title: Robust MADER
 description: fully decentralized asynchronous multiagent trajectory planner robust to communication delays
 img: assets/img/rmader.gif
-importance: 1
+importance: 9
 category: research
 selected: true
 related_publications: kondo2023rmader, kondo2022rmader

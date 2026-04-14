@@ -3,7 +3,7 @@ layout: page
 title: PRIMER
 description: perception-aware robust learning-based multiagent trajectory planner
 img: assets/img/primer.png
-importance: 2
+importance: 10
 category: research
 selected: true
 related_publications: primer2023

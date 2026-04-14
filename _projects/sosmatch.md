@@ -3,7 +3,7 @@ layout: page
 title: SOS-Match
 description: segmentation for open-set robust correspondence search and robot localization
 img: assets/img/sosmatch.png
-importance: 3
+importance: 7
 category: research
 selected: true
 related_publications: sosmatch2024
