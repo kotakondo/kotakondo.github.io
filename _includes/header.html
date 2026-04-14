@@ -7,8 +7,9 @@
           {% if page.permalink != '/' -%}
           <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
             {%- if site.title == "blank" -%}
+              <span class="font-weight-bold">
               {%- if site.first_name -%}
-                <span class="font-weight-bold">{{- site.first_name -}}&nbsp;</span>
+                {{- site.first_name -}}&nbsp;
               {%- endif -%}
               {%- if site.middle_name -%}
                 {{- site.middle_name -}}&nbsp;
@@ -16,6 +17,7 @@
               {%- if site.last_name -%}
                 {{- site.last_name -}}
               {%- endif -%}
+              </span>
             {%- else -%}
               {{- site.title -}}
             {%- endif -%}
