@@ -33,6 +33,10 @@ a.btncv:hover {
   text-decoration: none !important;
 }
 
+.badge.danger-color-dark {
+  background-color: var(--global-theme-color) !important;
+}
+
 /*****************************
  * CV TIME_TABLE styles
  *****************************/
