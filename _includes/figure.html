@@ -1,9 +1,10 @@
 {%- assign img_path = include.path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" -%}
+{%- assign is_gif = include.path | split: "." | last -%}
 
 <figure>
 
   <picture>
-    {% if site.imagemagick.enabled %}
+    {% if site.imagemagick.enabled and is_gif != "gif" %}
     {% for i in site.imagemagick.widths -%}
       <source
         class="responsive-img-srcset"
