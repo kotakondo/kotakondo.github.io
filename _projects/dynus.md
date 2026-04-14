@@ -10,3 +10,7 @@ related_publications: dynus2025
 ---
 
 DYNUS is an uncertainty-aware trajectory planner designed for dynamic unknown environments.
+
+[Paper](https://arxiv.org/abs/2504.16734){: .btn}
+[Code](https://github.com/mit-acl/dynus){: .btn}
+[Video](https://youtu.be/SI8YbMS-wyw){: .btn}

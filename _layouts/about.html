@@ -55,13 +55,13 @@ layout: default
 
           <!-- Selected projects -->
           {% if page.selected_projects -%}
-            <h2 style="margin-bottom: 60px"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">selected projects</a></h2>
+            <h2 style="margin-bottom: 60px"><a href="{{ '/projects/' | relative_url }}" style="color: inherit;">projects</a></h2>
             {%- include selected_projects.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 
