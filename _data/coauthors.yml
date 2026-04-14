@@ -1,34 +1,46 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"How":
+  - firstname: ["Jonathan P.", "J. P.", "Jonathan", "J."]
+    url: https://www.mit.edu/people/jhow/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Tordesillas":
+  - firstname: ["Jesus", "J."]
+    url: https://github.com/jtorde
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Tagliabue":
+  - firstname: ["Andrea", "A."]
+    url: https://scholar.google.com/citations?user=rZ5yRZcAAAAJ
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Lusk":
+  - firstname: ["Parker C.", "Parker", "P. C.", "P."]
+    url: https://plusk01.github.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Tewari":
+  - firstname: ["Claudius T.", "Claudius", "C."]
 
-"Przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Peterson":
+  - firstname: ["Mason B.", "Mason", "M."]
 
-"Schrödinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Thomas":
+  - firstname: ["Annika", "A."]
 
-"Lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Kinnari":
+  - firstname: ["Jouko", "J."]
 
-"Planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Figueroa":
+  - firstname: ["Rafael", "R."]
+
+"Rached":
+  - firstname: ["Jesus", "J."]
+
+"Kolmanovsky":
+  - firstname: ["Ilya", "I."]
+    url: https://aero.engin.umich.edu/people/kolmanovsky-ilya/
+
+"Kumar":
+  - firstname: ["Vivek", "V."]
+
+"Wu":
+  - firstname: ["Yuwei", "Y."]
+
+"Schwartz":
+  - firstname: ["Daniel", "D."]
