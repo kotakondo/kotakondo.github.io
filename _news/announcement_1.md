@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-01-01 00:00:00-0500
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Selected as **MathWorks Fellow**. MathWorks fellowship provides support to graduate students within the School of Science with a preference for students who are active users of MATLAB and/or Simulink.

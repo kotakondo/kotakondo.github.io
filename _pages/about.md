@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: kkondo@mit.edu, MIT Aerospace Controls Laboratory, Autonomy, Trajecotry Planning, Active SLAM 
+subtitle: MIT Aerospace Controls Laboratory | Multiagent Systems | Trajectory Planning | Optimization | Learning-based Planning
 
 profile:
   align: right
@@ -10,20 +10,14 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
 
-news: false  # includes a list of news items
+news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_projects: true  # includes a list of selected projects
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD student at the [Aerospace Controls Lab](https://acl.mit.edu/) at MIT, working under [Professor Jonathan How](https://www.mit.edu/people/jhow/).
-My research is centered around developing scalable, fast, and safe trajectory planning methods for UAVs in multi-agent settings, particularly in unknown environments.
+I am a graduate student at MIT AeroAstro, working in the [Aerospace Controls Lab (ACL)](https://acl.mit.edu/) under the guidance of [Professor Jonathan How](https://www.mit.edu/people/jhow/).
+My research interests focus on multiagent systems, optimization, and learning-based trajectory planning.
 
-Navigating unknown environments even with a single agent presents significant challenges. 
-In a multi-agent system, uncertainty adds another layer of complexity. 
-My past work has involved fully decentralized asynchronous multi-agent trajectory planners, and I have had the opportunity to demonstrate these planners in multi-agent flights. 
-The experience of watching our algorithms come to life in real-world is always exhilarating.
-
-Looking ahead, traditional optimization-based methods, while effective, often suffer from slow computation times, leading to delayed replanning and potential collisions in dynamic settings. 
-To address this challenge, our team is exploring an imitation learning-based approach aimed at significantly accelerating trajectory generation onboard.
+My current research projects include the development of a learning-based multiagent trajectory planner utilizing diffusion models, optimization-based trajectory planning, perception-aware and uncertainty-aware trajectory planning, detumbling an under-actuated spacecraft with a single-axis magnetic actuator, and quadcopter path-planning with an onboard EMPC controller.
