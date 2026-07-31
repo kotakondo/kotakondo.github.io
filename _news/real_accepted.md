@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**REAL** and **CGD** accepted to IEEE Conference on Decision and Control (CDC) 2024.
+**REAL** accepted to IEEE Conference on Decision and Control (CDC) 2024.

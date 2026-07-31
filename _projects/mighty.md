@@ -6,7 +6,7 @@ img: assets/img/mighty.gif
 importance: 2
 category: research
 selected: true
-related_publications: mighty2025
+related_publications: kondo2026mighty
 ---
 
 MIGHTY is a Hermite spline-based efficient trajectory planning method for UAVs.
