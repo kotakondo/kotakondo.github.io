@@ -3,7 +3,7 @@ layout: page
 title: PUMA
 description: fully decentralized uncertainty-aware multiagent trajectory planner with image segmentation-based frame alignment
 img: assets/img/puma.gif
-importance: 8
+importance: 9
 category: research
 selected: true
 related_publications: kondo2024puma
