@@ -22,7 +22,7 @@ My research interests focus on multiagent systems, optimization, and learning-ba
 
 My current research focuses on spatiotemporal trajectory planning for dynamic unknown environments, heterogeneous robot teams, learning-based multiagent trajectory planning utilizing diffusion models, and perception-aware and uncertainty-aware trajectory planning. My past experience includes detumbling an under-actuated spacecraft with a single-axis magnetic actuator and quadcopter path planning with an onboard EMPC controller.
 
-## thesis defense
+## PhD Thesis Defense (July 15, 2026)
 
 <div style="clear: both; max-width: 680px; margin: 1.5rem auto 2rem;">
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
