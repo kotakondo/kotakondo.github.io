@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Submitted **SANDO: Safe Autonomous Trajectory Planning for Dynamic Unknown Environments** to arXiv. [Paper](https://arxiv.org/abs/2604.07599) / [Code](https://github.com/mit-acl/sando) / [Video](https://youtu.be/_T10DJiLQXg)
+Submitted **SANDO: Safe Autonomous Trajectory Planning for Dynamic Unknown Environments** to IEEE Transactions on Robotics (T-RO). [Paper](https://arxiv.org/abs/2604.07599) / [Code](https://github.com/mit-acl/sando) / [Video](https://youtu.be/_T10DJiLQXg)
