@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**STORM** accepted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026. [Paper](https://arxiv.org/abs/2603.15826)
+**STORM** accepted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026. [Paper](https://arxiv.org/abs/2603.15826) / [Video](https://www.youtube.com/watch?v=_ZHGz-BkQzg)
