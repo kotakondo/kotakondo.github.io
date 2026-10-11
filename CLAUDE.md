@@ -125,6 +125,8 @@ intentional:
 - `_sass/_variables.scss` — theme color; `_sass/_cv.scss` — CV date badges use the theme color instead of
   MDB dark red; `_sass/_base.scss` + `assets/js/masonry.js` — `fitWidth: true` and `.grid { margin: 0 auto }`
   to center the project grid.
+- `_sass/_base.scss` `.profile` — sized for the landscape homepage photo (`kota-drone.jpg`): 40% wide beside
+  the bio on ≥576px (upstream 15%, made for portrait photos), full width with no side margin on phones.
 - `_includes/figure.html` — GIF srcset skip (see above).
 - `_layouts/bib.html` — adds the `Video` button.
 - `_includes/news.html` — dates render as `%b %Y` (month + year) instead of full dates.
