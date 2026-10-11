@@ -14,3 +14,4 @@ Communication delays can be catastrophic for multiagent systems. However, most e
 [Paper](https://arxiv.org/abs/2303.06222){: .btn}
 [Code](https://github.com/mit-acl/rmader){: .btn}
 [Video](https://www.youtube.com/watch?v=i1d8di2Nrbs){: .btn}
+[MIT News](https://news.mit.edu/2023/new-algorithm-keeps-drones-colliding-midair-0329){: .btn}

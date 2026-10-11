@@ -14,3 +14,4 @@ SANDO introduces a trajectory planner for 3D navigation in dynamic, unknown envi
 [Paper](https://arxiv.org/abs/2604.07599){: .btn}
 [Code](https://github.com/mit-acl/sando){: .btn}
 [Video](https://youtu.be/_T10DJiLQXg){: .btn}
+[MIT News](https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007){: .btn}

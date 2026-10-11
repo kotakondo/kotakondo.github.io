@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MIT Aerospace Controls Laboratory | Multiagent Systems | Trajectory Planning | Optimization | Learning-based Planning
+subtitle: Stanford Multi-Robot Systems Lab | VLMs | VLAs | World Models | Manipulation | Humanoids
 
 profile:
   align: right
@@ -17,10 +17,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a graduate student at MIT AeroAstro, working in the [Aerospace Controls Lab (ACL)](https://acl.mit.edu/) under the guidance of [Professor Jonathan How](https://www.mit.edu/people/jhow/).
-My research interests focus on multiagent systems, optimization, and learning-based trajectory planning.
+I am a postdoc in the [Multi-Robot Systems Lab (MSL)](https://msl.stanford.edu/) at Stanford University, working with [Professor Mac Schwager](https://profiles.stanford.edu/mac-schwager).
+My research focuses on vision-language models (VLMs), vision-language-action models (VLAs), and world models for robot manipulation and humanoid robots.
 
-My current research focuses on spatiotemporal trajectory planning for dynamic unknown environments, heterogeneous robot teams, learning-based multiagent trajectory planning utilizing diffusion models, and perception-aware and uncertainty-aware trajectory planning. My past experience includes detumbling an under-actuated spacecraft with a single-axis magnetic actuator and quadcopter path planning with an onboard EMPC controller.
+I received my PhD from MIT AeroAstro in 2026, where I worked in the [Aerospace Controls Lab (ACL)](https://acl.mit.edu/) under the guidance of [Professor Jonathan How](https://www.mit.edu/people/jhow/). My PhD research focused on safe and fast trajectory planning in unknown dynamic environments, including spatiotemporal trajectory planning, multiagent trajectory planning robust to communication delays, heterogeneous robot teams, learning-based multiagent trajectory planning utilizing diffusion models, and perception-aware and uncertainty-aware trajectory planning. Before that, I worked on detumbling an under-actuated spacecraft with a single-axis magnetic actuator and quadcopter path planning with an onboard EMPC controller.
 
 ## PhD Thesis Defense (July 15, 2026)
 
