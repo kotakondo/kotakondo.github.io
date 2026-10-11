@@ -88,7 +88,7 @@ last name with a list of accepted first-name spellings.
 `img:` (site-root-relative path), and `related_publications:` (bib keys).
 
 **News** (`_news/*.md`) sort by the `date` field, not filename; `inline: true` renders the body directly in
-the homepage table. Homepage shows the newest `announcements.limit` (5) items.
+the homepage table. Homepage shows the newest `announcements.limit` (10) items in a scroll box (`max-height: 60vw`); the full list is at `/news/`.
 
 **CV**: `_layouts/cv.html` renders `_data/cv.yml` only when `_data/resume.json` does **not** exist — the
 JSON Resume file was deliberately deleted (commit `0eec19f`). Re-adding any `_data/resume.*` silently
