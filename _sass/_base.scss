@@ -161,8 +161,9 @@ blockquote {
 
 // Profile
 
+// Sized for a landscape (3:2) photo: full width on phones, 40% beside the bio otherwise.
 .profile {
-  width: 50%;
+  width: 100%;
 
   .more-info {
     margin-bottom: 5px;
@@ -176,17 +177,17 @@ blockquote {
   }
 }
 
-.profile.float-right {
-  margin-left: 1rem;
-}
-
-.profile.float-left {
-  margin-right: 1rem;
-}
-
 @media (min-width: 576px) {
+  .profile.float-right {
+    margin-left: 1rem;
+  }
+
+  .profile.float-left {
+    margin-right: 1rem;
+  }
+
   .profile {
-    width: 15%;
+    width: 40%;
 
     .address {
       p {

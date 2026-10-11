@@ -6,7 +6,7 @@ subtitle: Stanford Multi-Robot Systems Lab | VLMs | VLAs | World Models | Manipu
 
 profile:
   align: right
-  image: kota-photo.jpg
+  image: kota-drone.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
@@ -22,13 +22,13 @@ My research focuses on vision-language models (VLMs), vision-language-action mod
 
 I received my PhD from MIT AeroAstro in 2026, where I worked in the [Aerospace Controls Lab (ACL)](https://acl.mit.edu/) under the guidance of [Professor Jonathan How](https://www.mit.edu/people/jhow/). My PhD research focused on safe and fast trajectory planning in unknown dynamic environments, including spatiotemporal trajectory planning, multiagent trajectory planning robust to communication delays, heterogeneous robot teams, learning-based multiagent trajectory planning utilizing diffusion models, and perception-aware and uncertainty-aware trajectory planning. Before that, I worked on detumbling an under-actuated spacecraft with a single-axis magnetic actuator and quadcopter path planning with an onboard EMPC controller.
 
-## PhD Thesis Defense (July 15, 2026)
+## SANDO: Helping Robots Avoid the Unexpected (MIT)
 
 <div style="clear: both; max-width: 680px; margin: 1.5rem auto 2rem;">
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
     <iframe
-      src="https://www.youtube-nocookie.com/embed/wMHJ8d7ZIK0"
-      title="PhD thesis defense"
+      src="https://www.youtube-nocookie.com/embed/JwsKW4u0-pY"
+      title="Helping robots avoid the unexpected"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
