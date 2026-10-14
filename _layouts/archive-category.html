@@ -15,7 +15,7 @@ layout: default
         {% for post in page.posts %}
         <tr>
           <th scope="row">{{ post.date | date: "%b %-d, %Y" }}</th>
-          <td>
+          <td{% if post.lang %} lang="{{ post.lang }}"{% endif %}>
             {% if post.redirect == blank %}
             <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
             {% elsif post.redirect contains '://' %}

@@ -4,18 +4,27 @@
     - name: Full Name
       value: Kota Kondo
     - name: Languages
-      value: Japanese (native), English (fluent)
+      value: Japanese, English
+
+- title: Current Position
+  type: time_table
+  contents:
+    - title: Postdoctoral Fellow
+      institution: Stanford University, Stanford, CA
+      year: 2026 - Present
+      description:
+        - Multi-Robot Systems Lab (MSL), advised by Prof. Mac Schwager
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Aerospace Engineering
+    - title: PhD in Aeronautics and Astronautics
       institution: Massachusetts Institute of Technology, Cambridge, MA
-      year: 2023 - Present
+      year: 2023 - 2026
       description:
         - Aerospace Controls Laboratory, advised by Prof. Jonathan How
         - "GPA: 4.8/5.0"
-    - title: SM in Aerospace Engineering
+    - title: SM in Aeronautics and Astronautics
       institution: Massachusetts Institute of Technology, Cambridge, MA
       year: 2021 - 2023
       description:
@@ -36,18 +45,24 @@
       institution: Kyushu University, Fukuoka, Japan
       year: 2016 - 2020
       description:
-        - "GPA: 3.82/4.0"
+        - "Major GPA: 3.80/4.0, Overall GPA: 3.82/4.0"
 
 - title: Research Experience
   type: time_table
   contents:
+    - title: Postdoctoral Research
+      institution: Stanford Multi-Robot Systems Lab (MSL), Prof. Mac Schwager
+      year: 2026 - Present
+      description:
+        - Vision-language models (VLMs), vision-language-action models (VLAs), and world models for long-horizon manipulation and humanoid tasks
     - title: Graduate Research Assistant
       institution: MIT Aerospace Controls Laboratory, Prof. Jonathan How
-      year: 2021 - Present
+      year: 2021 - 2026
       description:
-        - Multiagent trajectory planning, funded by Boeing Research & Technology
-        - Developed multiagent trajectory planner robust to communication delay
-        - Implemented imitation learning-based trajectory generation
+        - Trajectory planning and robot learning, funded by Boeing Research & Technology
+        - Developed real-time trajectory planners for unknown, dynamic environments (SANDO, DYNUS, MIGHTY) and deployed them on quadrotors and ground robots with onboard perception (T-RO, RA-L)
+        - "Built learning-based planners: imitation-learned trajectory generation (PRIMER), constraint-guided diffusion policies for UAV planning (CGD), and LLM-based adaptation on aerial robots (REAL)"
+        - Designed decentralized multiagent planners robust to communication delay (Robust MADER, PUMA), demonstrated on multi-UAV hardware
     - title: Research Assistant
       institution: University of Michigan & Kyushu University, Prof. Kolmanovsky & Prof. Hanada
       year: 2020 - 2021
@@ -87,12 +102,22 @@
         - Yamakawa Prize (President's Award), Kyushu University
         - Dean's Award (Top 2% freshman GPA), Kyushu University
 
+- title: Invited Talks
+  type: time_table
+  contents:
+    - year: 2026
+      items:
+        - "University of Pennsylvania, Vijay Kumar's Group: Safe and Fast Trajectory Planning in Unknown Dynamic Environments: From Multi-Agent Optimization to Learned World Models"
+    - year: 2025
+      items:
+        - "Brown University Robotics Seminar: Fast and Safe Real-time Trajectory Optimization"
+
 - title: Academic Service
   type: nested_list
   contents:
-    - title: Primary Reviewer (19 manuscripts)
+    - title: Primary Reviewer (29 manuscripts)
       items:
-        - "IEEE ICRA: 7, IEEE RAL: 5, IEEE TRO: 2, IEEE IROS: 3, IEEE OJCSYS: 2"
+        - "IEEE ICRA: 7, IEEE RAL: 6, IEEE TRO: 2, IEEE IROS: 12, IEEE OJCSYS: 2"
     - title: Assisted PI with manuscript reviews
       items:
         - IEEE TRO, Journal of Field Robotics, Science Robotics
@@ -100,5 +125,5 @@
 - title: Skills
   type: list
   contents:
-    - "Proficient: MATLAB, Python, C++, LaTeX, ROS, ROS2, Gazebo"
-    - "Experience: Julia, C"
+    - "Proficient: Python, C++, PyTorch, ROS/ROS2, Gazebo, MATLAB, LaTeX, CAD"
+    - "Experience: Julia, FORTRAN"
