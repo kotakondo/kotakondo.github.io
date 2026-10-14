@@ -15,7 +15,9 @@ genuinely presentational.
 
 ## Commands
 
-Ruby is present on this machine but `bundle`/`jekyll` are **not installed**, so Docker is the only local path:
+As of 2026-10-13 neither Ruby nor Docker is installed on this machine. To check a change without deploying, open a
+PR: `deploy.yml` builds it and uploads `_site` as the `site` artifact (kept 3 days). Fetch it with
+`gh run download <run-id> -n site -D <dir>` and serve it with `python3 -m http.server`. With Docker installed:
 
 ```bash
 docker compose up          # http://localhost:8080, --watch + livereload (bin/entry_point.sh)
@@ -71,7 +73,8 @@ pushing config or template changes.
 | Publications | `_bibliography/papers.bib` |
 | Project cards | `_projects/*.md` |
 | News/announcements on homepage | `_news/*.md` |
-| CV page | `_data/cv.yml` (+ `assets/pdf/` for the linked PDF) |
+| Blog posts (日本語 + English) | `_posts/YYYY-MM-DD-<slug>-ja.md` + `-en.md` |
+| CV page | `_data/cv.yml` (+ the PDF in `assets/pdf/`, named by `cv_pdf:` in `_pages/cv.md`) |
 | Co-author links, venue badges, repo lists | `_data/coauthors.yml`, `_data/venues.yml`, `_data/repositories.yml` |
 | Site-wide switches, social handles, plugin config | `_config.yml` |
 
@@ -88,7 +91,17 @@ last name with a list of accepted first-name spellings.
 `img:` (site-root-relative path), and `related_publications:` (bib keys).
 
 **News** (`_news/*.md`) sort by the `date` field, not filename; `inline: true` renders the body directly in
-the homepage table. Homepage shows the newest `announcements.limit` (10) items in a scroll box (`max-height: 60vw`); the full list is at `/news/`.
+the homepage table. Homepage shows all items (`announcements.limit` is blank) in a scroll box (`max-height: 60vw`); the full list is at `/news/`.
+
+**Blog** (`_posts/`): each article exists twice. `<slug>-ja.md` is the original (`lang: ja`,
+`categories: [日本語]`) and `<slug>-en.md` the translation (`categories: [English]`, no `lang`). They are
+cross-linked on their first line with `{% post_url %}`, so a wrong slug fails the build. English posts are dated one
+minute after their Japanese twin, with no UTC offset, so they list first and the shown day never shifts. kramdown
+`hard_wrap` is off, so an in-paragraph line break needs an explicit `<br>`. `lang: ja` sets `<html lang="ja">`
+(Japanese glyphs for kanji) and makes the blog index estimate read time from characters (÷500) instead of words.
+Cover images go in `assets/img/blog/` (also set as `thumbnail:`) and PDFs in `assets/pdf/blog/`. The posts came
+from kotakondo.com (WordPress), which is being shut down: never link to it. The design is in
+`docs/superpowers/specs/` (`docs` is in `exclude:`, so it is not published).
 
 **CV**: `_layouts/cv.html` renders `_data/cv.yml` only when `_data/resume.json` does **not** exist — the
 JSON Resume file was deliberately deleted (commit `0eec19f`). Re-adding any `_data/resume.*` silently
@@ -96,8 +109,8 @@ switches the page to the resume renderer and `cv.yml` stops showing. Each `cv.ym
 one of `map`, `time_table`, `list`, `nested_list`, `list_groups`, matching `_includes/cv/*.html`.
 
 **Navigation** comes from `nav:`/`nav_order:` in `_pages/*.md` (publications 1, projects 2, cv 4;
-`/repositories/` is `nav: false` but still built). The blog is effectively disabled — `blog_nav_title` is
-blank and there is no `_posts/` directory — though `blog/index.html` and the archive layouts remain.
+`/repositories/` is `nav: false` but still built). The **blog** tab is not a page: `blog_nav_title` in
+`_config.yml` turns it on, and `_includes/header.html` renders it after the page loop (last).
 
 ## Gotchas
 
@@ -112,8 +125,8 @@ blank and there is no `_posts/` directory — though `blog/index.html` and the a
   its value is green (`#0ac44b`). It feeds `--global-theme-color` in light mode; dark mode uses
   `$cyan-color`. Change both to fully re-theme.
 - **The favicon is the `icon:` emoji in `_config.yml`** (currently ✈️), not a file.
-- `_plugins/external-posts.rb` fetches `external_sources` RSS (still pointing at al-folio's Medium feed) on
-  every build — a network call and phantom posts. Clearing `external_sources` removes it.
+- `_plugins/external-posts.rb` fetches every `external_sources` RSS feed on each build and injects its entries as
+  posts. It is now `[]`; it used to point at al-folio's demo Medium feed, which put a demo post on `/blog/`.
 - If `bibtex_show={true}` is ever added to an entry, also add `video` to `filtered_bibtex_keywords`; the
   `video` field is a local addition and is not currently filtered out of the BibTeX popup.
 
@@ -134,3 +147,10 @@ intentional:
   email icon removed, homepage section arrangement.
 - `_includes/selected_projects.html` — local addition with no upstream counterpart; driven by
   `selected_projects: true` in `_pages/about.md`.
+- `_includes/header.html` — the blog tab is rendered after the page loop (last in the nav), not after About.
+- `_layouts/default.html` — `<html lang>` uses `page.lang` when set (Japanese posts).
+- `blog/index.html` — `per_page: 10`; read time for `lang: ja` posts is characters / 500 + 1; list items carry
+  `lang` from the post; tag/category links end in `/` (also in `_layouts/post.html`), so GitHub Pages never has to
+  redirect a non-ASCII path such as `/blog/category/日本語`.
+- `_layouts/archive-{category,tag,year}.html` — each post's table cell carries `lang` from the post.
+- `.github/workflows/deploy.yml` — uploads `_site` as artifact `site` on pull requests.
