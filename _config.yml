@@ -121,8 +121,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: # blog_name will be displayed in your blog page
-blog_nav_title: # your blog must have a title for it to be displayed in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_description: Notes on studying abroad and grad school applications / 海外大学院留学の記録
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -154,9 +154,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+external_sources: []
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -203,6 +201,7 @@ kramdown:
 include: ['_pages']
 exclude:
   - bin
+  - docs
   - Gemfile
   - Gemfile.lock
   - vendor
@@ -263,8 +262,8 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
-display_categories: ['blockquotes'] # these categories will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog
+display_categories: ['日本語', 'English'] # language filter on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
