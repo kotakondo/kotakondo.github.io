@@ -74,7 +74,7 @@ pushing config or template changes.
 | Project cards | `_projects/*.md` |
 | News/announcements on homepage | `_news/*.md` |
 | Blog posts (日本語 + English) | `_posts/YYYY-MM-DD-<slug>-ja.md` + `-en.md` |
-| CV page | `_data/cv.yml` (+ `assets/pdf/` for the linked PDF) |
+| CV page | `_data/cv.yml` (+ the PDF in `assets/pdf/`, named by `cv_pdf:` in `_pages/cv.md`) |
 | Co-author links, venue badges, repo lists | `_data/coauthors.yml`, `_data/venues.yml`, `_data/repositories.yml` |
 | Site-wide switches, social handles, plugin config | `_config.yml` |
 
@@ -91,7 +91,7 @@ last name with a list of accepted first-name spellings.
 `img:` (site-root-relative path), and `related_publications:` (bib keys).
 
 **News** (`_news/*.md`) sort by the `date` field, not filename; `inline: true` renders the body directly in
-the homepage table. Homepage shows the newest `announcements.limit` (10) items in a scroll box (`max-height: 60vw`); the full list is at `/news/`.
+the homepage table. Homepage shows all items (`announcements.limit` is blank) in a scroll box (`max-height: 60vw`); the full list is at `/news/`.
 
 **Blog** (`_posts/`): each article exists twice. `<slug>-ja.md` is the original (`lang: ja`,
 `categories: [日本語]`) and `<slug>-en.md` the translation (`categories: [English]`, no `lang`). They are
