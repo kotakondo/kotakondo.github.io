@@ -4,7 +4,7 @@
     - name: Full Name
       value: Kota Kondo
     - name: Languages
-      value: Japanese (native), English (fluent)
+      value: Japanese, English
 
 - title: Current Position
   type: time_table
