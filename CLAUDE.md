@@ -95,12 +95,14 @@ the homepage table. Homepage shows all items (`announcements.limit` is blank) in
 
 **Blog** (`_posts/`): each article exists twice. `<slug>-ja.md` is the original (`lang: ja`,
 `categories: [日本語]`) and `<slug>-en.md` the translation (`categories: [English]`, no `lang`). They are
-cross-linked on their first line with `{% post_url %}`, so a wrong slug fails the build. English posts are dated one
+cross-linked on their first line with Jekyll's `post_url` tag, so a wrong slug fails the build. English posts are dated one
 minute after their Japanese twin, with no UTC offset, so they list first and the shown day never shifts. kramdown
 `hard_wrap` is off, so an in-paragraph line break needs an explicit `<br>`. `lang: ja` sets `<html lang="ja">`
 (Japanese glyphs for kanji) and makes the blog index estimate read time from characters (÷500) instead of words.
 Cover images go in `assets/img/blog/` (also set as `thumbnail:`) and PDFs in `assets/pdf/blog/`. The posts came
-from kotakondo.com (WordPress), which is being shut down: never link to it. The design is in
+from kotakondo.com (WordPress), which is being shut down: never link to it. Never write a Liquid tag (`{` + `%`)
+in this file: it is published, and GitHub Pages re-runs Jekyll on the published files, so a tag here breaks the
+deploy (it did on 2026-10-14). The design is in
 `docs/superpowers/specs/` (`docs` is in `exclude:`, so it is not published).
 
 **CV**: `_layouts/cv.html` renders `_data/cv.yml` only when `_data/resume.json` does **not** exist — the
