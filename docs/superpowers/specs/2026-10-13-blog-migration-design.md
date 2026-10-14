@@ -28,7 +28,9 @@ WordPress tags (on post 105 only): GRE, SoP, TOEFL, 奨学金, 推薦状, 研究
 ## Posts
 
 Six files in a new `_posts/` directory, one Japanese original and one English translation per article, both
-dated with the original WordPress publish date:
+dated with the original WordPress publish date. The time has no UTC offset, so the displayed day never shifts on the UTC CI
+runner: Japanese posts at `12:00:00` and English at `12:01:00`, so English lists above Japanese within a pair,
+as in the preview the author approved.
 
 | Article | Japanese | English |
 | --- | --- | --- |
@@ -54,7 +56,9 @@ Body, top to bottom:
 
 1. A link to the other language: `[English version](…)` on Japanese posts, `[日本語版](…)` on English posts.
 2. English posts only: *Translated from the Japanese original published <Month D, YYYY>.*
-3. The cover image.
+3. The cover image, via `{% include figure.html %}`, with alt text describing it. Retrospective and SoP:
+   MIT's Great Dome (JA `MITのグレートドーム`). Funai: the Funai Foundation website banner (JA
+   `船井情報科学振興財団ウェブサイトのバナー`).
 4. The converted article.
 
 Conversion rules:
@@ -63,8 +67,16 @@ Conversion rules:
   that were nested inside a pane (Reading, Listening, …, Verbal, Quantitative, Writing) drop one level.
 - The `<span>` heading anchors, Amazon `a-size-*`/`a-spacing-*` wrappers and other theme markup are removed.
   Their text is kept.
-- Tables become GFM tables, the blockquote becomes a Markdown blockquote, and a `wp-block-file` becomes a
-  plain link (`📄 [title (PDF)](/assets/pdf/blog/…)`).
+- The 3-column admissions-results table (`fw-table`) becomes a GFM table. The Funai 応募要項 "table" is a
+  one-column layout of alternating title and body rows. It becomes one bold title paragraph (`**1. 目的**`) plus
+  one body paragraph per pair, keeping the original line breaks.
+- The blockquote becomes a Markdown blockquote. A `wp-block-file` becomes a plain link whose text is the new
+  file name (`📄 [mit-sop-kota-kondo.pdf](/assets/pdf/blog/mit-sop-kota-kondo.pdf)`).
+- Line breaks inside a paragraph are written as an explicit `<br>` at the end of the line. Jekyll's kramdown
+  ignores single newlines (`hard_wrap: false`), and the pre-commit `trailing-whitespace` hook would strip
+  two-space breaks.
+- Local links are root-relative (`/assets/…`; `baseurl` is empty). The language cross-link uses
+  `{% post_url %}`, so a wrong slug fails the build.
 - External links are kept exactly, including dead ones. Dead links are reported, not edited.
 - Nothing may link to kotakondo.com.
 
@@ -95,7 +107,8 @@ translated by meaning) for the author to review before merging.
   and grad school applications / 海外大学院留学の記録*).
 - `display_categories: ['日本語', 'English']` and `display_tags: []`, replacing the al-folio demo values.
 - `external_sources: []`. The current value (al-folio's demo Medium feed) injects demo posts into
-  `site.posts` on every build, and they would appear in the blog.
+  `site.posts` on every build. As of 2026-10-13 the live `kotakondo.github.io/blog/` already lists one
+  ("Displaying External Posts on Your al-folio Blog"), along with al-folio's demo tag list.
 - `exclude:` gains `docs`, so this spec is not published as part of the site.
 - `latest_posts` stays off on the homepage (`_pages/about.md` already has `latest_posts: false`).
 
@@ -106,9 +119,9 @@ Templates:
 - `_layouts/default.html`: `<html lang="{{ page.lang | default: site.lang }}">`, so Japanese posts render kanji
   with Japanese glyphs. On a page declared `en`, Linux and Windows browsers may use Chinese glyph forms for
   Han characters.
-- `blog/index.html`: read time for `lang: ja` posts is computed from the character count of the stripped
-  content at ~500 characters per minute (rounded up, minimum 1), instead of words / 180. This applies to both the
-  featured-card and list templates. English posts are unchanged.
+- `blog/index.html`: read time for `lang: ja` posts is `characters / 500 + 1` on the stripped content (mirroring
+  the existing `words / 180 + 1`). This applies to both the featured-card and list templates. English posts are
+  unchanged. `per_page` goes from 5 to 10 so all six posts fit on one index page.
 
 `CLAUDE.md` (website):
 - add a blog row to the content-model table and note the `lang`/category conventions;
