@@ -149,5 +149,8 @@ intentional:
   `selected_projects: true` in `_pages/about.md`.
 - `_includes/header.html` — the blog tab is rendered after the page loop (last in the nav), not after About.
 - `_layouts/default.html` — `<html lang>` uses `page.lang` when set (Japanese posts).
-- `blog/index.html` — `per_page: 10`; read time for `lang: ja` posts is characters / 500 + 1.
+- `blog/index.html` — `per_page: 10`; read time for `lang: ja` posts is characters / 500 + 1; list items carry
+  `lang` from the post; tag/category links end in `/` (also in `_layouts/post.html`), so GitHub Pages never has to
+  redirect a non-ASCII path such as `/blog/category/日本語`.
+- `_layouts/archive-{category,tag,year}.html` — each post's table cell carries `lang` from the post.
 - `.github/workflows/deploy.yml` — uploads `_site` as artifact `site` on pull requests.
